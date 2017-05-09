@@ -9,8 +9,29 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Shrikhand" rel="stylesheet">
     <center><strong><header>PocketChef</header></strong></center>
   </head>
-  
   <body>
+    <nav>
+      <p class="navbar-text pull-right">
+      <% if user_signed_in? %>
+        <p id="userLogIn">Logged in as <strong><%= current_user.email %>
+        </strong></p>
+        <%= link_to 'Home |', root_path, :class => 'navbar-link' %>
+        <%= link_to 'Edit Account|', edit_user_registration_path, :class => 'navbar-link' %>
+        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => 'navbar-link'  %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link |'  %>
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+      <% end %>
+      </p>
+      <p id="navTitle"> PocketChef</p>
+    </nav>
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <%end %>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
