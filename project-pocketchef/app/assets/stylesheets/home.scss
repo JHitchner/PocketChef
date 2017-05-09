@@ -5,7 +5,7 @@
 header {
   font-family: 'Shrikhand', cursive;
   font-size: 125px;
-  color: white;
+  color: #F1B310;
 }
 
 body {
@@ -34,3 +34,18 @@ p {
   color: black;
   background-color: white;
 }
+
+p {
+  overflow: hidden;
+  }
+
+p a {
+  float: center;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  color: #F1B310;
+  margin: 60px;
+  font-family: 'Shrikhand', cursive;
+  }

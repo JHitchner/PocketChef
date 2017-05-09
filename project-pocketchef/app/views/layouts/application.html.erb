@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjectPocketchef</title>
+    <title>Pocketchef(Auf Deutsch)</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,11 +11,12 @@
   </head>
 
   <body>
+
+    
     <nav>
       <p class="navbar-text pull-right">
       <% if user_signed_in? %>
-        <p id="userLogIn">Logged in as <strong><%= current_user.email %>
-        </strong></p>
+        <p id="userLogIn">Logged in as <strong><%= current_user.email %></strong></p>
         <%= link_to 'Home |', root_path, :class => 'navbar-link' %>
         <%= link_to 'Edit Account|', edit_user_registration_path, :class => 'navbar-link' %>
         <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => 'navbar-link'  %>
@@ -23,16 +24,38 @@
         <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link |'  %>
         <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
-      </p>
-      <p id="navTitle"> PocketChef</p>
     </nav>
+
+
+
     <% if notice %>
       <p class="notice"><%= notice %></p>
     <%end %>
     <% if alert %>
       <p class="alert"><%= alert %></p>
     <% end %>
-
     <%= yield %>
+
+
+
+    <script>
+      var subButton = document.getElementById("submit");
+      var searchField = document.getElementById("cooking");
+
+      var apiPath = 'https://api.edamam.com/search?q=';
+      var appId = "<%= ENV['RECIPE_APP_ID'] %>";
+      var apiKey = "<%= ENV['RECIPE_API_KEY'] %>";
+
+      function recipeGenerate(){
+         var url = apiPath + searchField.value + appId+ apiKey;
+      }
+
+      subButton.addEventListener("click", function(){
+         recipeGenerate();
+      })
+    </script>
+
+
+
   </body>
 </html>
