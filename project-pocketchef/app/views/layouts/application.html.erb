@@ -4,8 +4,8 @@
     <title>Pocketchef(Auf Deutsch)</title>
 
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Shrikhand" rel="stylesheet">
     <center><strong><header>PocketChef</header></strong></center>
   </head>
@@ -35,24 +35,26 @@
     <% end %>
     <%= yield %>
 
-
-
     <script>
-      var Button = document.getElementById("submit");
-      var searchField = document.getElementById("cooking");
+      document.addEventListener("DOMContentLoaded", function() {
+        var button = document.getElementById("submit");
+        var searchField = document.getElementById("cooking");
 
-// This is adding ERB so that the variables can read the ENV
-      var apiPath = 'https://api.edamam.com/search?q=';
-      var appId = "<%= ENV['RECIPE_APP_ID'] %>";
-      var apiKey = "<%= ENV['RECIPE_API_KEY'] %>";
+  // This is adding ERB so that the variables can read the ENV
+        var apiPath = 'https://api.edamam.com/search?q=';
+        var appId = "<%= ENV['RECIPE_APP_ID'] %>";
+        var apiKey = "<%= ENV['RECIPE_API_KEY'] %>";
 
-      function recipeGenerate(){
-         var url = apiPath + searchField.value + appId+ apiKey;
-      }
+        function recipeGenerate(){
+           var url = apiPath + searchField.value + appId+ apiKey;
+           console.log(url)
+        };
 
-      Button.addEventListener("click", function(){
-         recipeGenerate();
-      })
+        button.addEventListener("click", function(){
+           recipeGenerate();
+
+        });
+    });
     </script>
 
 
