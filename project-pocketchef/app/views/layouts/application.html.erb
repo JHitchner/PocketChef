@@ -12,7 +12,7 @@
 
   <body>
 
-    
+
     <nav>
       <p class="navbar-text pull-right">
       <% if user_signed_in? %>
@@ -39,9 +39,10 @@
 
 
     <script>
-      var subButton = document.getElementById("submit");
+      var Button = document.getElementById("submit");
       var searchField = document.getElementById("cooking");
 
+// This is adding ERB so that the variables can read the ENV
       var apiPath = 'https://api.edamam.com/search?q=';
       var appId = "<%= ENV['RECIPE_APP_ID'] %>";
       var apiKey = "<%= ENV['RECIPE_API_KEY'] %>";
@@ -50,7 +51,7 @@
          var url = apiPath + searchField.value + appId+ apiKey;
       }
 
-      subButton.addEventListener("click", function(){
+      Button.addEventListener("click", function(){
          recipeGenerate();
       })
     </script>
