@@ -8,18 +8,30 @@ header {
   color: #F1B310;
 }
 
-.home {
+.index {
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 26px;
   background: url(german1.jpg);
-  // Do we want this image to be on every page?
   background-size: cover;
 }
 
-.profiles {
+.user {
   background: url(beer2.jpg);
   background-size: cover;
 };
+
+p.notice {
+  color: #F1B310;
+}
+
+body {
+  background-image: url(potato.jpg);
+  background-size: cover;
+}
+
+.edit_user {
+  padding-top: 20px;
+}
 
 p {
   text-align: center;
@@ -80,6 +92,7 @@ a {
 #userLogIn {
   color: #F1B310;
   font-family: 'Merriweather Sans', sans-serif;
+  text-align: center;
 }
 
 // Editing User Page CSS
