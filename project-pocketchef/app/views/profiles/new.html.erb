@@ -1,13 +1,12 @@
-This is the new user profile page.
 
-<%= form_for :profile, url: profiles_path do |form| %>
-  <p>
-    <%= form.text_field :name, :placeholder => "Enter Username" %>
-  </p>
-  <p>
-    <%= form.text_field :preference, :placeholder => "Enter Your Preference" %>
-  </p>
-  <p>
-    <%= form.submit "Submit"  %>
-  </p>
-<% end %>
+  <%= form_for :profile, url: profiles_path do |post| %>
+    <p>
+      <%= post.text_field :name, :placeholder => "Username"%>
+    </p>
+    <p>
+      <%= post.text_field :preference, :placeholder => "pref"%>
+    </p>
+    <p>
+      <%= post.submit "submit" %>
+    </p>
+  <% end %>
