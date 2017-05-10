@@ -8,20 +8,25 @@ header {
   color: #F1B310;
 }
 
-body {
+.home {
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 26px;
-  background-image: url(german.jpg);
-  // Do we want this image to be on every page? 
+  background: url(german1.jpg);
+  // Do we want this image to be on every page?
   background-size: cover;
 }
+
+.profiles {
+  background: url(beer2.jpg);
+  background-size: cover;
+};
 
 p {
   text-align: center;
 }
 
 #cooking {
-  width: 800px;
+  width: 400px;
   height: 50px;
   text-align: center;
   font-size: 30px;
@@ -45,9 +50,9 @@ p a {
   text-decoration: none;
   color: white;
   text-align: center;
-  font-size: 30px;
+  font-size: 26px;
   color: #F1B310;
-  margin: 50px;
+  margin: 10px;
   font-family: 'Shrikhand', cursive;
   }
 
@@ -106,4 +111,10 @@ a.navbar-link {
 .links {
   text-align: center;
   font-size: 16px;
+}
+
+.notice {
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  font-size: 20px;
 }
