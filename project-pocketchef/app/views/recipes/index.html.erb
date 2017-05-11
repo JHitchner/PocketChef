@@ -7,9 +7,14 @@
   <% end %>
 </p>
 
+  <% @recipeResponse["hits"].each do |response| %>
 <p>
-  <%= @recipeResponse["hits"][0]["recipe"]["label"] %>
+  <li><%= response["recipe"]["label"] %></li>
+  <li><%= response["recipe"]["ingredients"] %></li>
+  <li> <% @image = response["recipe"]["image"] %>
+  <li> <%= image_tag(@image) %> </li>
 </p>
+  <%end%>
 <p>
 <%= @recipeResponse["hits"][1]["recipe"]["label"] %>
 </p>
