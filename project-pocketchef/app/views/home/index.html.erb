@@ -6,19 +6,16 @@
   <% end %>
 </p>
 
-  <!-- <div class="slideshow-container">
-    <div class="mySlides fade">
 
-      </div>
-    </div> -->
     <% @recipeResponse["hits"].each do |response| %>
     <% @image = response["recipe"]["image"] %>
     <%= image_tag(@image) %>
+    <%= response["recipe"]["label"] %>
     <%end%>
 
 
-<!--
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 <br>
