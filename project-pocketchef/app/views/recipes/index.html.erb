@@ -10,11 +10,10 @@
   <% @recipeResponse["hits"].each do |response| %>
 <p>
   <li><%= response["recipe"]["label"] %></li>
-  <li><%= response["recipe"]["ingredients"]["text"] %></li>
-  <li> <% @image = response["recipe"]["image"] %>
-  <li> <%= image_tag(@image) %> </li>
+    <% response["recipe"]["ingredients"].each do |text| %>
+      <li> <%= text["text"] %> </li>
+    <% end %>
+   <% @image = response["recipe"]["image"] %>
+   <%= image_tag(@image) %>
 </p>
   <%end%>
-<p>
-<%= @recipeResponse["hits"][1]["recipe"]["label"] %>
-</p>
