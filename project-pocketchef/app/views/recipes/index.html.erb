@@ -8,12 +8,15 @@
 </p>
 
   <% @recipeResponse["hits"].each do |response| %>
-<p>
-  <li><%= response["recipe"]["label"] %></li>
+    <% @image = response["recipe"]["image"] %>
+    <%= image_tag(@image) %>
+    <% @title = response["recipe"]["label"] %>
     <% response["recipe"]["ingredients"].each do |text| %>
-      <li> <%= text["text"] %> </li>
+       <% @ingredient = text["text"] %>
     <% end %>
-   <% @image = response["recipe"]["image"] %>
-   <%= image_tag(@image) %>
-</p>
+    <%= form_for(:recipe, url: recipes_path) do |f| %>
+      <%= f.text_field :title, value: @title %>
+      <%= f.text_area :ingredients, value: @ingredient %>
+      <%= f.submit "Make List" %>
+   <% end%>
   <%end%>
