@@ -12,8 +12,8 @@ class RecipesController < ApplicationController
       puts @recipeResponse["hits"][0]["recipe"]["label"]
   end
 
-  def create
-    redirect_to recipes_path(:search => params[:search])
-  end
+  # def create
+  #   redirect_to recipes_path(:search => params[:search])
+  # end
 
 end

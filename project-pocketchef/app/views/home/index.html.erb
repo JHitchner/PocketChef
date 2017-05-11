@@ -1,26 +1,30 @@
-<center><p>
-  <%= form_tag(recipes_path, id: "search-form") do %>
-    <label for="search"></label>
-    <%= text_field_tag :search, "What Do You Wanna Make?" %>
-    <center><%= submit_tag "Let's Get Cooking" %></center>
+<p>
+  <%= form_tag({:controller => 'home', :action => 'index'}, method: 'get') do %>
+      <label for="search"></label>
+      <%= text_field_tag :search,"What Do You Wanna Make?" %>
+      <%= submit_tag "Let's Get Cooking", :name => nil %>
   <% end %>
-</p></center>
+</p>
 
+  <!-- <div class="slideshow-container">
+    <div class="mySlides fade">
 
-
-<div class="slideshow-container">
-  <div class="mySlides fade">
+      </div>
+    </div> -->
+    <% @recipeResponse["hits"].each do |response| %>
+    <% @image = response["recipe"]["image"] %>
     <%= image_tag(@image) %>
-    <%= response["recipe"]["label"] %>
-  </div>
+    <%end%>
 
+
+<!--
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
+
 <br>
 
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
-</div>
+</div> -->
