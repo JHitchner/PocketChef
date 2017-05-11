@@ -1,6 +1,9 @@
+
+
 <p>
-  <input id='cooking' placeholder="What Do You Wanna Make?"></input>
-  <br>
-  </br>
-  <button id= 'submit'>Let's Get Cooking!</button>
+  <%= form_tag(recipes_path, id: "search-form") do %>
+      <%=<label for="search"></label> %>
+      <%= text_field_tag :search,"What Do You Wanna Make?" %>
+      <%= submit_tag "Let's Get Cooking" %>
+  <% end %>
 </p>
