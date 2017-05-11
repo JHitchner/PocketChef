@@ -8,10 +8,10 @@
   <% end %>
 </p>
 
-<% @recipeResponse["hits"].each do |response| %>
-  <p>
-    <% @image = response["recipe"]["image"] %>
-    <%= image_tag(@image) %>
-    <%= response["recipe"]["label"] %>
-  </p>
-<%end%>
+      <% @recipeResponse["hits"].each do |response| %>
+        <p>
+          <% @image = response["recipe"]["image"] %>
+          <%= image_tag(@image) %>
+          <%= response["recipe"]["label"] %>
+        </p>
+      <%end%>

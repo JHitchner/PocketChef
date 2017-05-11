@@ -7,13 +7,11 @@ class RecipesController < ApplicationController
 
       @recipe = params[:search]
       @response = HTTParty.get(@apiPath.to_s + "" + @recipe.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s)
-      puts "This is the recipe #{@recipe}"
       @recipeResponse = JSON.parse(@response.body)
-      puts @recipeResponse["hits"][0]["recipe"]["label"]
   end
 
-  # def create
-  #   redirect_to recipes_path(:search => params[:search])
-  # end
+  def create
+
+  end
 
 end

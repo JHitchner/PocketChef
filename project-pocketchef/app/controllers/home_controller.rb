@@ -6,8 +6,7 @@ class HomeController < ApplicationController
     @apiKey = ENV['RECIPE_API_KEY']
 
     @recipe = params[:search]
-    @response = HTTParty.get(@apiPath.to_s + "" + @recipe.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s)
+    @response = HTTParty.get( @apiPath.to_s + "" + @recipe.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s)
     @recipeResponse = JSON.parse(@response.body)
-
   end
 end
