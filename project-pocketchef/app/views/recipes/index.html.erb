@@ -1,6 +1,6 @@
 
 <p>
-  <%= form_tag(recipes_path, id: "search-form") do %>
+  <%= form_tag({:controller => 'recipes', :action => 'index'}, method: 'get') do %>
       <label for="search"></label>
       <%= text_field_tag :search,"What Do You Wanna Make?" %>
       <%= submit_tag "Let's Get Cooking", :name => nil %>
@@ -10,7 +10,7 @@
   <% @recipeResponse["hits"].each do |response| %>
 <p>
   <li><%= response["recipe"]["label"] %></li>
-  <li><%= response["recipe"]["ingredients"] %></li>
+  <li><%= response["recipe"]["ingredients"]["text"] %></li>
   <li> <% @image = response["recipe"]["image"] %>
   <li> <%= image_tag(@image) %> </li>
 </p>
