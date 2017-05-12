@@ -1,41 +1,46 @@
 // Place all the styles related to the Recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 // Recipe All
 .searchImages{
   position: relative;
   width: 150%;
-  height:600px;
-  left: 0px;
+  height:500px;
+  left: -10px;
   top: 300px;
   background-color:rgba(0, 23, 31, 0.3);
 }
 
 #imageResponseRecipe{
   position: relative;
-  margin: 10px;
-  top: 0px;
-  left: 100px;
-  float:left;
+  margin: 20px;
+  top: 20px;
+  left: 60px;
+  width: 300px;
+  float: left;
 }
 #TitleRecipe{
   position: relative;
   color: #F1B310;
+  left: -60px;
   font-size: 12px;
   font-family:'Montserrat', sans-serif;
 }
 #ingredientList{
   position: relative;
-  top: 10px;
-  color: #F1B310;
-  font-size: 18px;
-  margin: 0px;
+  width: 400px;
+  margin: 0;
+  height: 30px;
+  left: -100px;
+  text-align: center;
+  font-size: 15px;
   font-family:'Montserrat', sans-serif;
 }
 .recipeSubmit{
   position: relative;
   top: 20px;
-  left: 60px;
+  left: 0px;
 }
 .form{
   margin: 0px;
@@ -45,7 +50,6 @@
   position: absolute;
   height: 30px;
   width: 150px;
-
   border-radius: 30px;
   left: 860px;
   top: 400px;

@@ -22,8 +22,8 @@
           <p id="TitleRecipe">
             <%= f.text_field :title, value: @title %>
           </p>
-          <p id="ingredientList">
-            <%= f.text_area :ingredients, value: @ingredients %>
+          <p >
+            <%= f.text_area :ingredients, value: @ingredients, :id => "ingredientList" %>
           </p>
               <%= f.submit "Make List", :class => "recipeSubmit" %>
         </span>
