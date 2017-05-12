@@ -22,4 +22,10 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: ENV[myapp]
+  username: ENV[username]
+  password: ENV['DB_PASSWORD']
+  recipeId: ENV['RECIPE_APP_ID']
+  recipeApi: ENV['RECIPE_API_KEY']
