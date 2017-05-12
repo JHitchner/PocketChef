@@ -8,25 +8,26 @@
 </p>
 
 <div class="searchImages">
+  <%= form_for(:recipe, url: recipes_path, :class => "form") do |f| %>
   <% @recipeResponse["hits"].each do |response| %>
     <span id="imageResponseRecipe">
       <% @image = response["recipe"]["image"] %>
       <%= image_tag(@image) %>
-    </span>
+
     <% @title = response["recipe"]["label"] %>
     <% response["recipe"]["ingredients"].each do |text| %>
-      <% @ingredient = text["text"] %>
-    <% end %>
-    <span style="margin:0,padding:0">
-    <%= form_for(:recipe, url: recipes_path, :class => "form") do |f| %>
+      <% @ingredients = text["text"] %>
+    <%end%>
+
+      <p id="ingredientList">
+        <%= f.text_area :ingredients, value: @ingredients %>
+      </p>
       <p id="TitleRecipe">
         <%= f.text_field :title, value: @title %>
       </p>
-      <p id="ingredientList">
-        <%= f.text_area :ingredients, value: @ingredient   %>
-      </p>
-      <%= f.submit "Make List", :class => "recipeSubmit" %>
+        <%= f.submit "Make List", :class => "recipeSubmit" %>
     <% end%>
+  </span>
   <%end%>
-</span>
+
 </div>

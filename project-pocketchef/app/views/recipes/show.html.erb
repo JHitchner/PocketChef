@@ -1,8 +1,15 @@
 Your Shopping List.
 
-<%= @recipe.title%>
-<%= @recipe.ingredients %>
-<%= link_to "Proceed to Your Profile", profile_path(@recipe.user_id) %>
-<!-- <%=link_to "#{recipe.title}", recipe_path(@recipe)%>
-<%= link_to "Edit List", edit_recipe_path(@recipe) %>
-<%= link_to 'Destroy', recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure?' } %> -->
+
+<div class="recipe_list">
+
+<p id="recipeTitleShow"><%= @recipe.title%></p>
+
+<li>
+  <%= @recipe.ingredients %>
+</li>
+
+</div>
+<p><%=link_to "Edit List", edit_recipe_path(@recipe.id), :id => "editList"%></p>
+
+<p><%=link_to "Delete List", recipe_path(@recipe.id),:method => :delete, :id => "editList"%></p>

@@ -9,6 +9,5 @@ class HomeController < ApplicationController
 
     @response = HTTParty.get( @apiPath.to_s + "" + @recipe.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s + "&from=0" + "&to=5")
     @recipeResponse = JSON.parse(@response.body)
-
   end
 end

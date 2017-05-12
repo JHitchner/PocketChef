@@ -21,9 +21,8 @@
   width: 100%;
   height: 50px;
   top: 30px;
-  ;
 }
-.navbar-link {
+.user-link {
   position: relative;
   top: -35px;
   text-decoration: none;

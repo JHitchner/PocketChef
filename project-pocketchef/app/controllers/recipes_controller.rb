@@ -24,6 +24,17 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
   end
+  def edit
+  @recipe = Recipe.find(params[:id])
+  end
+  def update
+    @recipe = Recipe.update(recipe_params)
+  end
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    redirect_to profile_path(current_user)
+  end
   private
     def recipe_params
       params.require(:recipe).permit(:title, :ingredients)

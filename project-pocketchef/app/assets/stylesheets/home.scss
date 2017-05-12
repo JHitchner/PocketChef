@@ -29,6 +29,7 @@ body {
   background-image: url(potato.jpg);
   background-size: cover;
   overflow-x: hidden;
+  // overflow-y: hidden;
 }
 
 .edit_user {
@@ -42,7 +43,7 @@ p {
 #search {
   position: relative;
   left: 725px;
-  top: 200px;
+  top: 100px;
   width: 400px;
   height: 50px;
   font-size: 30px;
@@ -99,7 +100,7 @@ p a {
   color: #F1B310;
   margin: 10px;
   font-family: 'Shrikhand', cursive;
-  }
+}
 
 // Sign In Page CSS
 #new_user {
@@ -143,13 +144,6 @@ h2 {
 
 .button_to {
   text-align: center;
-}
-
-
-
-.links {
-  text-align: center;
-  font-size: 16px;
 }
 
 .notice {

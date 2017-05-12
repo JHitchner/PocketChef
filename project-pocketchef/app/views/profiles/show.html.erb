@@ -1,16 +1,39 @@
 
-<h1>Profile Show</h1>
+<p><%= link_to 'Edit Account', edit_user_registration_path , :id => "editAccount" %>
+</p>
 
-<!--List Current User's Saved Recipes- Link back to show  -->
-<p>Shopping Lists</p>
+<p id="profileSearch">
+  <%= form_tag({:controller => 'profiles', :action => 'show'}, method: 'get') do %>
+    <label for="search"></label>
+      <%= text_field_tag :search, nil, value: @profile.preference%>
+    <%= submit_tag "Let's Get Cooking", :name => nil %>
+  <% end %>
+
+<div class="profilePreference">
+<% @recipeResponse["hits"].each do |response| %>
+  <span id="imageResponseProfile">
+    <p id="profileTitle">
+      <%= response["recipe"]["label"] %>
+    </p>
+    <p "imageSize">
+    <% @image = response["recipe"]["image"] %>
+    <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
+  </p>
+  </span>
+<%end%>
+</div>
+
+<div class="grow">
+  Shopping Lists
+  <ol>
+    <% @recipe.each do |recipe| %>
+      <li>
+        <%= link_to "#{recipe.title}", recipe_path(recipe) %>
+      </li>
+    <%end%>
+  </ol>
+</div>
 
 
 <div id="listContainer">
-
-
 </div>
-
-<div id="avatar_image">
-
-</div>
-<%= link_to 'Account', edit_user_registration_path, :class => 'navbar-link' %>
