@@ -20,12 +20,12 @@ h1 {
 .index {
   font-family: 'Montserrat', sans-serif;
   font-size: 26px;
-  background-image: image-url('project-pocketchef/app/assets/images/german1.jpg');
+  background-image: image-url('/app/assets/images/german1.jpg');
   background-size: cover;
 }
 
 .user {
-  background: image-url('project-pocketchef/app/assets/images/beer2.jpg');
+  background: image-url('/app/assets/images/beer2.jpg');
   background-size: cover;
 };
 
@@ -34,7 +34,7 @@ p.notice {
 }
 
 body {
-  background-image: image-url('project-pocketchef/app/assets/images/potato.jpg');
+  background-image: image-url('/app/assets/images/potato.jpg');
   background-size: cover;
   overflow-x: hidden;
   padding-bottom: 2.5em;
