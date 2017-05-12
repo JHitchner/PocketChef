@@ -1,1 +1,8 @@
-Show
+Your Shopping List.
+
+<%= @recipe.title%>
+<%= @recipe.ingredients %>
+<%= link_to "Proceed to Your Profile", profile_path(@recipe.user_id) %>
+<!-- <%=link_to "#{recipe.title}", recipe_path(@recipe)%>
+<%= link_to "Edit List", edit_recipe_path(@recipe) %>
+<%= link_to 'Destroy', recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure?' } %> -->

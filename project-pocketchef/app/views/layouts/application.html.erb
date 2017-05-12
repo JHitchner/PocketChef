@@ -10,13 +10,13 @@
   </head>
 
   <body>
-      <nav>
+      <nav id="navBar">
         <p class="navbar-text pull-right">
         <% if user_signed_in? %>
-          <p id="userLogIn">Logged in as <strong><%= current_user.email %></strong></p>
+          <p id="userLogIn">Welcome Chef <strong><%= current_user.email %></strong></p>
           <%= link_to 'Home', root_path, :class => 'navbar-link' %>
-          <%= link_to 'Edit Account', edit_user_registration_path, :class => 'navbar-link' %>
-          <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => 'navbar-link'  %>
+          <%= link_to 'Profile', profile_path(current_user), :class => 'navbar-link' %>
+          <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => 'signoutLink'  %>
         <% else %>
           <%= link_to 'Home', root_path, :class => 'navbar-link' %>
           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>

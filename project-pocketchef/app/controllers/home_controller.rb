@@ -9,14 +9,6 @@ class HomeController < ApplicationController
 
     @response = HTTParty.get( @apiPath.to_s + "" + @recipe.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s + "&from=0" + "&to=5")
     @recipeResponse = JSON.parse(@response.body)
-    #
-    # @fullQuery = @apiPath.to_s + "" + @recipe.to_s  + "&api_id="+ @appId.to_s + "&api_key=" + @apiKey.to_s + "&from=0" + "&to=5"
-    #
-    #
-    # @response = HTTParty.get(@fullQuery)
-    # puts "yo dawg this is my query", @fullQuery
-    # @recipeResponse = JSON.parse(@response.body)
-    # puts "yo dawg this is my JSON response", @recipeResponse.inspect
 
   end
 end
