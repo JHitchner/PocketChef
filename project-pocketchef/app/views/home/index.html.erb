@@ -1,12 +1,10 @@
+<%= form_tag({:controller => 'home', :action => 'index'}, method: 'get') do %>
+  <label for="search"></label>
+  <center><%= text_field_tag :search, nil, :placeholder => "What Do You Wanna Make?" %></center>
+    <center><%= submit_tag "Let's Get Cooking", :name => nil, :id => "submitHome" %></center>
+<% end %>
 
-  <%= form_tag({:controller => 'home', :action => 'index'}, method: 'get') do %>
-    <label for="search"></label>
-    <%= text_field_tag :search, nil, :placeholder => "What Do You Wanna Make?" %>
-      <%= submit_tag "Let's Get Cooking", :name => nil, :id => "submitHome" %>
-  <% end %>
-
-
-<div class="searchImages">
+<!-- <div class="searchImages">
   <% @recipeResponse["hits"].each do |response| %>
     <span id="imageResponse">
       <p id= "homeTitle"><%= response["recipe"]["label"] %></p>
@@ -14,4 +12,47 @@
     <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
     </span>
 <%end%>
-</div>
+</div> -->
+
+
+<table>
+  <tr>
+    <th>
+      <% @recipeResponse["hits"].each do |response| %>
+        <%= response["recipe"]["label"] %>
+        <% @image = response["recipe"]["image"] %>
+    </th>
+    <th>
+      <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
+      <%end%>
+    </th>
+  </tr>
+</table>
+    <!-- <th>
+      <% @recipeResponse["hits"].each do |response| %>
+        <%= response["recipe"]["label"] %>
+          <% @image = response["recipe"]["image"] %>
+        <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
+      <%end%>
+    </th>
+    <th> -->
+        <!-- <% @recipeResponse["hits"].each do |response| %>
+          <%= response["recipe"]["label"] %>
+            <% @image = response["recipe"]["image"] %>
+          <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
+        <%end%>
+      </th>
+    <th>
+      <% @recipeResponse["hits"].each do |response| %>
+        <%= response["recipe"]["label"] %>
+          <% @image = response["recipe"]["image"] %>
+        <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
+      <%end%>
+    </th>
+    <th>
+      <% @recipeResponse["hits"].each do |response| %>
+        <%= response["recipe"]["label"] %>
+          <% @image = response["recipe"]["image"] %>
+        <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
+      <%end%> -->
+    <!-- </th> -->

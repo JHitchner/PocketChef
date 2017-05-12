@@ -32,10 +32,11 @@
   font-family:'Montserrat', sans-serif;
   text-align: center;
   }
+
 .signoutLink{
   position: relative;
   top: -35px;
-  left: 1400px;
+  /*left: 1400px;*/
   text-decoration: none;
   font-size: 20px;
   color: #F1B310;
