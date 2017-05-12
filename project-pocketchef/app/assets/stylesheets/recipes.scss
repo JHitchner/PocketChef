@@ -96,16 +96,31 @@ font-family:'Montserrat', sans-serif;
 .recipe_list{
   position: relative;
   top: 200px;
-  background-color:rgba(0, 23, 31, 0.3);
+  width: 400px;
+  padding: 50px;
+  left: 680px;
+  background-color:rgba(0, 23, 31, 0.6);
 }
 #recipeTitleShow{
   position: relative;
-  font-size: 30px;
+  font-size: 20px;
   font-family:'Montserrat', sans-serif;
+  color: #F1B310;
 }
 #recipe_ingredients{
   position: relative;
-  font-size: 30px;
+  font-size: 15px;
   font-family:'Montserrat', sans-serif;
-  left: 300px;
+  left: 10px;
+  color: #F1B310;
+}
+#editList{
+  position: relative;
+  font-size: 20px;
+  font-family:'Montserrat', sans-serif;
+}
+#showLinks{
+  position: relative;
+  top: 150px;
+  left: 30px;
 }
