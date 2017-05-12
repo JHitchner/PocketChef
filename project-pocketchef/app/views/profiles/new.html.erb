@@ -1,12 +1,12 @@
 
   <%= form_for :profile, url: profiles_path do |post| %>
-    <p>
+    <p class="form-style">
       <%= post.text_field :name, :placeholder => "Username"%>
     </p>
-    <p>
+    <p class="form-style">
       <%= post.text_field :preference, :placeholder => "pref"%>
     </p>
-    <p>
+    <p class= "form-submit-button">
       <%= post.submit "submit" %>
     </p>
   <% end %>

@@ -1,10 +1,11 @@
 
 <p>
   <%= form_tag({:controller => 'recipes', :action => 'index'}, method: 'get') do %>
-      <label for="search"></label>
-      <%= text_field_tag :search,"What Do You Wanna Make?" %>
-      <%= submit_tag "Let's Get Cooking", :name => nil %>
-  <% end %>
+    <label for="search"></label>
+    <%= text_field_tag :search, nil, :placeholder => "What Do You Wanna Make?" %>
+    <%= submit_tag "Let's Get Cooking", :name => nil, :id => "submitHome" %>
+<% end %>
+
 </p>
 
 <div class="searchImages">

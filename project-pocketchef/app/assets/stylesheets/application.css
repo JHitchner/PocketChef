@@ -17,7 +17,7 @@
  /*Nav Styling*/
 #navBar{
   position: relative;
-  background-color: rgba(0, 23, 31, 0.3);
+  background-color: rgba(26, 27, 28, 0.7);
   width: 100%;
   height: 50px;
   top: 30px;
@@ -32,14 +32,41 @@
   font-family:'Montserrat', sans-serif;
   text-align: center;
   }
-  .signoutLink{
-    position: relative;
-    top: -35px;
-    left: 1400px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #F1B310;
-    margin: 30px;
-    font-family:'Montserrat', sans-serif;
-    text-align: center;
-  }
+.signoutLink{
+  position: relative;
+  top: -35px;
+  left: 1400px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #F1B310;
+  margin: 30px;
+  font-family:'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.form-style  {
+  background-color: rgba(26, 27, 28, 0.7);
+  position: relative;
+  left: -20px;
+  padding: 25px;
+  width: 50%;
+  align: center;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.form-submit-button {
+  background: #0066A2;
+  color: white;
+  border-style: outset;
+  border-color: #0066A2;
+  height: 50px;
+  width: 100px;
+  font: bold 15px arial, sans-serif;
+  text-shadow:none;
+
+}
+
+.form-style label {
+  font-size: 28px;
+}
