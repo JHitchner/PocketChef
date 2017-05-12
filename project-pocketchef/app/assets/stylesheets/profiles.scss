@@ -76,7 +76,6 @@
 }
 .grow{
   padding: 5px;
-  // background-color:rgba(0, 23, 31, 0.3); border-radius: 10px;
   height: 50px;
   width: 200px;
   border: 1 px solid rgba(0, 23, 31, 0.6);
@@ -95,37 +94,8 @@
 .grow:hover {
   height: 250px;
 }
-// .grow2{
-//   padding: 10px;
-//   background-color:rgba(0, 23, 31, 0.6); border-radius: 10px;
-//   height: 50px;
-//   width: 200px;
-//   border: 1 px solid rgba(0, 23, 31, 0.6);
-//   position: absolute;
-//   transition: height 0.30s;
-//   text-align: center;
-//   overflow: hidden;
-//   transition: 1s ease-in-out;
-//   top:500px;
-//   left: 1650px;
-//   color: #F1B310;
-//   font-size: 20px;
-//   font-family:'Montserrat', sans-serif;
-// }
-// .grow2:hover {
-//   height: 200px;
-// }
+
 // Profile new
-.form-style  {
-  background-color: rgba(26, 27, 28, 0.7);
-  position: relative;
-  left: -20px;
-  padding: 25px;
-  width: 200px;
-  top: 10px;
-  margin: 0px;
-  align: center;
-}
 
 .form-submit-button {
   background: #0066A2;
