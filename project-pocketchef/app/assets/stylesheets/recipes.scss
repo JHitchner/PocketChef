@@ -11,6 +11,14 @@
   top: 300px;
   background-color:rgba(0, 23, 31, 0.3);
 }
+#recipeIndex{
+  position: relative;
+  left: 760px;
+  top: 100px;
+  height: 30px;
+  width: 300px;
+  text-align: center;
+}
 
 #imageResponseRecipe{
   position: relative;
@@ -52,7 +60,7 @@
   width: 150px;
   border-radius: 30px;
   left: 860px;
-  top: 400px;
+  top: 500px;
   font-style: italic;
   background-color: #F1B310;
 }

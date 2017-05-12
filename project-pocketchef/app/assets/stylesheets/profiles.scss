@@ -5,41 +5,42 @@
 
 #profileSearch{
   position: relative;
-  left: 675px;
+  left: 645px;
   top: 100px;
   height: 100px;
   width: 500px;
   background-color:rgba(0, 23, 31, 0.3);
 }
 #profileSubmit{
-    position: absolute;
-    height: 30px;
-    width: 150px;
-    font-size: 13px;
-    font-family:'Montserrat', sans-serif;
-    border-radius: 30px;
-    left: 850px;
-    top: 450px;
-    font-style: italic;
-    background-color: #F1B310;
+  position: absolute;
+  height: 30px;
+  width: 150px;
+  font-size: 13px;
+  font-family:'Montserrat', sans-serif;
+  border-radius: 30px;
+  left: 830px;
+  top: 550px;
+  font-style: italic;
+  background-color: #F1B310;
 }
 #profileSearchField{
   position: relative;
   top: 15px;
-  left: 780px;
+  left: 750px;
   text-align: center;
   width: 300px;
   height: 40px;
   font-size: 20px;
   font-family:'Montserrat', sans-serif;
 }
+
 #editAccount{
   position: absolute;
   color: #F1B310;
   font-size: 20px;
   font-family:'Montserrat', sans-serif;
   left: 1500px;
-  top: 178px;
+  top: 240px;
 }
 
 #listContainer{
@@ -51,6 +52,7 @@
   z-index: -1;
   background-color:rgba(0, 23, 31, 0.3);
 }
+
 .profilePreference{
   position: relative;
   top: 160px;
@@ -58,16 +60,17 @@
 }
 #imageResponseProfile{
   height: 200px;
-  width: 300px;
+  width: 250px;
   position: relative;
   margin: 20px;
+  margin-top: 30px;
   top: 40px;
-  left: 90px;
+  left:200px;
   float: left;
 }
 #profileTitle{
   position: relative;
-  left: 0px;
+  left: -30px;
   width: 330px;
   top: 10px;
   color: #F1B310;
@@ -84,7 +87,7 @@
   text-align: center;
   overflow: hidden;
   transition: 1s ease-in-out;
-  top: 160px;
+  top: 225px;
   left: 1300px;
   z-index: 2;
   color: #F1B310;
@@ -92,22 +95,35 @@
   font-family:'Montserrat', sans-serif;
 }
 .grow:hover {
-  height: 250px;
+  height: 450px;
 }
 
 // Profile new
 
+.form-style  {
+  background-color: rgba(26, 27, 28, 0.7);
+  padding-top: 15px;
+  padding: 25px;
+  width: 200px;
+  top: 10px;
+  margin: 0px;
+  align: center;
+  color: #F1B310;
+  font-size: 30px;
+  font-family:'Montserrat', sans-serif;
+}
+
+
 .form-submit-button {
-  background: #0066A2;
-  position: relative;
-  left: 870px;
-  color: white;
-  border-style: outset;
-  border-color: #0066A2;
-  padding-top: 20px;
+  // background: #0066A2;
+  // text-align: center;
+  // color: white;
+  // border-style: outset;
+  // border-color: #0066A2;
+  // padding-top: 20px;
   height: 20px;
   width: 50px;
-  font-size: 20px;
+  // font-size: 20px;
   font-family:'Montserrat', sans-serif;
-
+  margin: 2em auto 0;
 }

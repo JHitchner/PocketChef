@@ -6,7 +6,15 @@ header {
   font-family: 'Shrikhand', cursive;
   font-size: 80px;
   color: #F1B310;
-  // text-shadow:
+  text-shadow: 5px 5px Black;
+}
+
+h1 {
+  padding-top: -10px;
+  font-family: 'Shrikhand', cursive;
+  font-size: 30px;
+  color: #F1B310;
+  text-shadow: 5px 5px Black;
 }
 
 .index {
@@ -29,7 +37,7 @@ body {
   background-image: url(potato.jpg);
   background-size: cover;
   overflow-x: hidden;
-  // overflow-y: hidden;
+  padding-bottom: 2.5em;
 }
 
 .edit_user {
@@ -41,26 +49,41 @@ p {
 }
 
 #search {
-  position: relative;
+  margin-top: 60px;
   left: 725px;
   top: 100px;
   width: 400px;
   height: 50px;
   font-size: 30px;
   color: rgb(0, 23, 31);
-  // color: #f4c323;
   text-align: center;
   background-color:rgb(220, 220, 221);
   border: 0px;
 }
+
+#submitHome {
+  margin-top: 20px;
+  height: 30px;
+  width: 150px;
+  font-size: 13px;
+  font-family:'Montserrat', sans-serif;
+  border-radius: 30px;
+  left: 1170px;
+  top: 400px;
+  font-style: italic;
+  background-color: #F1B310;
+}
+
 .searchImages{
-  position: relative;
+  // position: relative;
+  margin-top: 10px;
   width: 100%;
   height: 400px;
   left: 0px;
   top: 300px;
   background-color:rgba(0, 23, 31, 0.3);
 }
+
 #imageResponse{
   position: relative;
   float: left;
@@ -74,6 +97,7 @@ p {
   font-size: 18px;
   font-family:'Montserrat', sans-serif;
 }
+
 #submitHome{
   position: absolute;
   height: 30px;
@@ -152,98 +176,17 @@ h2 {
   font-size: 20px;
 }
 
-// Carousel
-
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1400px;
-  height: 500px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: 10px;
-  color: white;
-  font-weight: bold;
-  font-size: 50px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-// /* Number text (1/3 etc) */
-// .numbertext {
-//   color: #f2f2f2;
-//   font-size: 12px;
-//   padding: 8px 12px;
-//   position: absolute;
-//   top: 0;
+// table, th, td {
+//     margin-top: 40px;
+//     padding-top: 10px;
 // }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-
-  background-color: #717171 ;
-
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.flex-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #F1B310;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
