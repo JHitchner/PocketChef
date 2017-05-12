@@ -6,8 +6,8 @@
 <p id="profileSearch">
   <%= form_tag({:controller => 'recipes', :action => 'index'}, method: 'get') do %>
     <label for="search"></label>
-      <%= text_field_tag :search, nil, value: @profile.preference%>
-    <%= submit_tag "Let's Get Cooking", :name => nil %>
+      <%= text_field_tag :search, nil, value: @profile.preference, :id => "profileSearchField"%>
+    <%= submit_tag "Let's Get Cooking", :name => nil, :id => "profileSubmit" %>
   <% end %>
 
 <div class="profilePreference">
@@ -34,12 +34,12 @@
     <%end%>
   </ol>
 </div>
-<div class="grow2">
+<!-- <div class="grow2">
   <h3>My Preference</h3>
   <ol>
     <%= @profile.preference%>
   </ol>
-</div>
+</div> -->
 
 
 <div id="listContainer">

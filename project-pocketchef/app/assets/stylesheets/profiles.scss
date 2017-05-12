@@ -6,10 +6,32 @@
 #profileSearch{
   position: relative;
   left: 675px;
-  top: 200px;
+  top: 100px;
   height: 100px;
   width: 500px;
   background-color:rgba(0, 23, 31, 0.3);
+}
+#profileSubmit{
+    position: absolute;
+    height: 30px;
+    width: 150px;
+    font-size: 13px;
+    font-family:'Montserrat', sans-serif;
+    border-radius: 30px;
+    left: 850px;
+    top: 450px;
+    font-style: italic;
+    background-color: #F1B310;
+}
+#profileSearchField{
+  position: relative;
+  top: 15px;
+  left: 780px;
+  text-align: center;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  font-family:'Montserrat', sans-serif;
 }
 #editAccount{
   position: absolute;
@@ -54,7 +76,7 @@
 }
 .grow{
   padding: 5px;
-  background-color:rgba(0, 23, 31, 0.6); border-radius: 10px;
+  // background-color:rgba(0, 23, 31, 0.3); border-radius: 10px;
   height: 50px;
   width: 200px;
   border: 1 px solid rgba(0, 23, 31, 0.6);
@@ -63,36 +85,36 @@
   text-align: center;
   overflow: hidden;
   transition: 1s ease-in-out;
-  top:300px;
-  left: 1650px;
+  top: 160px;
+  left: 1300px;
   z-index: 2;
   color: #F1B310;
-  font-size: 20px;
+  font-size: 18px;
   font-family:'Montserrat', sans-serif;
 }
 .grow:hover {
-  height: 200px;
+  height: 250px;
 }
-.grow2{
-  padding: 10px;
-  background-color:rgba(0, 23, 31, 0.6); border-radius: 10px;
-  height: 50px;
-  width: 200px;
-  border: 1 px solid rgba(0, 23, 31, 0.6);
-  position: absolute;
-  transition: height 0.30s;
-  text-align: center;
-  overflow: hidden;
-  transition: 1s ease-in-out;
-  top:500px;
-  left: 1650px;
-  color: #F1B310;
-  font-size: 20px;
-  font-family:'Montserrat', sans-serif;
-}
-.grow2:hover {
-  height: 200px;
-}
+// .grow2{
+//   padding: 10px;
+//   background-color:rgba(0, 23, 31, 0.6); border-radius: 10px;
+//   height: 50px;
+//   width: 200px;
+//   border: 1 px solid rgba(0, 23, 31, 0.6);
+//   position: absolute;
+//   transition: height 0.30s;
+//   text-align: center;
+//   overflow: hidden;
+//   transition: 1s ease-in-out;
+//   top:500px;
+//   left: 1650px;
+//   color: #F1B310;
+//   font-size: 20px;
+//   font-family:'Montserrat', sans-serif;
+// }
+// .grow2:hover {
+//   height: 200px;
+// }
 // Profile new
 .form-style  {
   background-color: rgba(26, 27, 28, 0.7);
