@@ -5,7 +5,6 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -21,11 +20,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
   adapter: postgresql
-  encoding: unicode
-  database: ENV[myapp]
-  username: ENV[username]
-  password: ENV['DB_PASSWORD']
   recipeId: ENV['RECIPE_APP_ID']
   recipeApi: ENV['RECIPE_API_KEY']
