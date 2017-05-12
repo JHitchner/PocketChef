@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20170511192734_add_array_column_to_recipe.rb

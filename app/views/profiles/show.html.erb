@@ -1,0 +1,38 @@
+<p>
+  <%= link_to 'Edit Account', edit_user_registration_path, :id => "editAccount" %>
+</p>
+
+<p id="profileSearch">
+  <%= form_tag({:controller => 'recipes', :action => 'index'}, method: 'get') do %>
+    <label for="search"></label>
+    <%= text_field_tag :search, nil, value: @profile.preference, :id => "profileSearchField"%>
+    <%= submit_tag "Let's Get Cooking", :name => nil, :id => "profileSubmit" %>
+  <% end %>
+
+<div class="profilePreference">
+  <% @recipeResponse["hits"].each do |response| %>
+    <span id="imageResponseProfile">
+      <p id="profileTitle">
+        <%= response["recipe"]["label"] %>
+      </p>
+      <p "imageSize">
+        <% @image = response["recipe"]["image"] %>
+        <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
+      </p>
+    </span>
+<%end%>
+</div>
+
+<div class="grow">
+  <h3>My Lists</h3>
+  <ol>
+    <% @recipe.each do |recipe| %>
+      <li>
+        <%= link_to "#{recipe.title}", recipe_path(recipe) %>
+      </li>
+    <%end%>
+  </ol>
+</div>
+
+<div id="listContainer">
+</div>
