@@ -57,14 +57,15 @@
 }
 
 .form-submit-button {
-  background: #0066A2;
+  background: #F1B310;
   color: white;
   border-style: outset;
-  border-color: #0066A2;
+  border-color: #F1B310;
   height: 50px;
   width: 100px;
   font: bold 15px arial, sans-serif;
-  text-shadow:none;
+  text-shadow: none;
+  box-shadow: 1px 1px White;
 
 }
 

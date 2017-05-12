@@ -1,11 +1,17 @@
 <%= form_for :profile, url: profiles_path do |post| %>
   <p class="form-style">
+    <span class="" style="display: block;">
+      Username
+    </span>
     <%= post.text_field :name, :placeholder => "Username"%>
   </p>
   <p class="form-style">
-    <%= post.text_field :preference, :placeholder => "pref"%>
+    <span class="" style="display: block;">
+      Preference
+    </span>
+    <%= post.text_field :preference, :placeholder => "Preference"%>
   </p>
-  <p class= "form-submit-button">
-    <%= post.submit "submit" %>
+  <p class="actions">
+    <%= post.submit "Submit", :class => 'form-submit-button'%>
   </p>
 <% end %>

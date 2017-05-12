@@ -10,6 +10,7 @@ header {
 }
 
 h1 {
+  padding-top: -10px;
   font-family: 'Shrikhand', cursive;
   font-size: 30px;
   color: #F1B310;
@@ -162,17 +163,17 @@ h2 {
   font-size: 20px;
 }
 
+// table, th, td {
+//     margin-top: 40px;
+//     padding-top: 10px;
+// }
 
-//
-table, th, td {
-    margin-top: 40px;
-    padding-top: 10px;
-
-    // border-collapse: collapse;
-    color: white;
+.flex-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #F1B310;
     font-family: 'Montserrat', sans-serif;
-}
-
-table img {
-  width:
+    text-align: center;
 }

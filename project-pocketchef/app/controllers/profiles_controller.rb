@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
      @appId = ENV['RECIPE_APP_ID']
      @apiKey = ENV['RECIPE_API_KEY']
 
-     @response = HTTParty.get(@apiPath.to_s + "" + @recipe_pref.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s + "&from=0" + "&to=5")
+     @response = HTTParty.get(@apiPath.to_s + "" + @recipe_pref.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s + "&from=0" + "&to=12")
      @recipeResponse = JSON.parse(@response.body)
      @recipe_pref = params[:search]
   end
