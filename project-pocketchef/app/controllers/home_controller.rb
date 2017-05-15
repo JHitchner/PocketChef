@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     @apiKey = ENV['RECIPE_API_KEY']
 
     @recipe = params[:search]
-    @fullQuery = @apiPath.to_s + '' + @recipe.to_s  + '&api_id='+ @appId.to_s + '&api_key=' + @apiKey.to_s + "&from=0" + "&to=12"
+    @fullQuery = @apiPath.to_s + "" + @recipe.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s + "&from=0" + "&to=12"
     @response = HTTParty.get(@fullQuery)
     puts "yo dawg this is my query", @fullQuery
     @recipeResponse = JSON.parse(@response.body)
