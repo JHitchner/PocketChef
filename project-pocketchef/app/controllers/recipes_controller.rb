@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
   def edit
-  @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.find(params[:id])
   end
   def update
     @recipe = Recipe.update(recipe_params)

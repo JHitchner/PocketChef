@@ -10,14 +10,18 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(params_profile)
     @profile.user_id = current_user.id
       if @profile.save
-        redirect_to profile_path(@profile.user_id)
+        redirect_to profile_path(@profile.id)
       else
         render 'new'
       end
   end
 
   def show
-     @profile = Profile.find(params[:id])
+    if(Profile.exists?(current_user.id))
+      @profile = Profile.find(params[:id])
+    else redirect_to new_profile_path
+    end
+    #  @profile = Profile.find(params[:id])
      @recipe = Recipe.all
      @apiPath = 'https://api.edamam.com/search?q='
      @appId = ENV['RECIPE_APP_ID']
@@ -32,6 +36,6 @@ class ProfilesController < ApplicationController
   private
 
   def params_profile
-    params.require(:profile).permit(:name, :preference)
+    params.require(:profile).permit(:name, :preference, {:user_id => [current_user.id]})
   end
 end
