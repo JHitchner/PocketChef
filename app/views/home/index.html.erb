@@ -1,0 +1,20 @@
+<%= form_tag({:controller => 'home', :action => 'index'}, method: 'get') do %>
+  <label for="search"></label>
+  <center><%= text_field_tag :search, nil, :placeholder => "What Do You Wanna Make?" %></center>
+    <center><%= submit_tag "Let's Get Cooking", :name => nil, :id => "submitHome" %></center>
+<% end %>
+
+
+<div class="flex-container">
+  <% @recipeResponse["hits"].each do |response| %>
+  <div class="flex-item">
+    <div class="">
+      <%= response["recipe"]["label"] %>
+      <% @image = response["recipe"]["image"] %>
+    </div>
+    <div class="">
+      <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
+      </div>
+  </div>
+  <% end %>
+</div>

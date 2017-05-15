@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pocketchef(Auf Deutsch)</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
+    <center><strong><header>PocketChef</header></strong></center>
+    <center><strong><h1>Auf Deutsch</h1></strong></center>
+  </head>
+
+  <body>
+    <nav id="navBar">
+      <p class="navbar-text pull-right">
+      <% if user_signed_in? %>
+        <p id="userLogIn">Welcome Chef <strong><%= current_user.email %></strong></p>
+        <%= link_to 'Home', root_path, :class => 'user-link' %>
+        <%= link_to 'Profile', profile_path(current_user), :class => 'user-link' %>
+        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => 'signoutLink'  %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+      <% end %>
+    </nav>
+
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <%end %>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

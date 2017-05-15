@@ -8,4 +8,4 @@ Hitchner, is responsible for creating the entire backend in which the user can s
 
 Chen, is responsible for creating the background images of the pages, styling the layout of the pages, and writing the initial code for deploying the API.
 
-PocketChef is powered by the usage of HTML, CSS, JavaScript, Ruby, Ruby on Rails, and the Edamam API. 
+PocketChef is powered by the usage of HTML, CSS, JavaScript, Ruby, Ruby on Rails, and the Edamam API.

@@ -1,0 +1,12 @@
+
+<div class="edit_form">
+  <%= form_for(:recipe, url: profile_path(current_user), :class => "form") do |f| %>
+    <p id="TitleRecipeEdit">
+      <%= f.text_field :title %>
+    </p>
+    <p id= "ingredient_container">
+      <%= f.text_area :ingredients, :id => "ingredientListEdit"%>
+    </p>
+    <%= f.submit "Update List", :id => "recipeSubmitEdit" %>
+  <% end%>
+</div>

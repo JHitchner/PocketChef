@@ -1,0 +1,15 @@
+
+<div class="recipe_list">
+  <p id="recipeTitleShow">
+    <%= @recipe.title%>
+  </p>
+  <p>
+  <li id="recipe_ingredients">
+    <%= @recipe.ingredients %>
+  </li>
+  </p>
+</div>
+<p id="showLinks">
+  <%=link_to "Edit List", edit_recipe_path(@recipe.id), :id => "editList"%>
+  <%=link_to "Delete List", recipe_path(@recipe.id),:method => :delete, :id => "editList"%>
+</p>

@@ -1,0 +1,32 @@
+<p>
+  <%= form_tag({:controller => 'recipes', :action => 'index'}, method: 'get') do %>
+    <label for="search"></label>
+    <%= text_field_tag :search, nil, :placeholder => "What Do You Wanna Make?", :id => "recipeIndex" %>
+    <%= submit_tag "Let's Get Cooking", :name => nil, :id => "submitHomeRecipe" %>
+<% end %>
+
+</p>
+
+<div class="searchImages">
+  <span>
+    <%= form_for(:recipe, url: recipes_path, :class => "form") do |f| %>
+      <% @recipeResponse["hits"].each do |response| %>
+        <span id="imageResponseRecipe">
+          <% @image = response["recipe"]["image"] %>
+          <%= image_tag(@image) %>
+          <% @title = response["recipe"]["label"] %>
+          <% response["recipe"]["ingredients"].each do |text| %>
+            <% @ingredients = text["text"] %>
+          <%end%>
+          <p id="TitleRecipe">
+            <%= f.text_field :title, value: @title %>
+          </p>
+          <p >
+            <%= f.text_area :ingredients, value: @ingredients, :id => "ingredientList" %>
+          </p>
+              <%= f.submit "Make List", :class => "recipeSubmit" %>
+        </span>
+        <% end%>
+      <%end%>
+    </span>
+</div>

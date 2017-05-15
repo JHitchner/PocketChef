@@ -1,0 +1,134 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Recipe All
+.searchImages{
+  position: relative;
+  width: 150%;
+  height:500px;
+  left: -10px;
+  top: 300px;
+  background-color:rgba(0, 23, 31, 0.3);
+}
+#recipeIndex{
+  position: relative;
+  left: 760px;
+  top: 100px;
+  height: 30px;
+  width: 300px;
+  text-align: center;
+}
+
+#imageResponseRecipe{
+  position: relative;
+  margin: 20px;
+  top: 20px;
+  left: 60px;
+  width: 300px;
+  float: left;
+}
+#TitleRecipe{
+  position: relative;
+  color: #F1B310;
+  left: -60px;
+  font-size: 12px;
+  font-family:'Montserrat', sans-serif;
+}
+#ingredientList{
+  position: relative;
+  width: 400px;
+  margin: 0;
+  height: 30px;
+  left: -100px;
+  text-align: center;
+  font-size: 15px;
+  font-family:'Montserrat', sans-serif;
+}
+.recipeSubmit{
+  position: relative;
+  top: 20px;
+  left: 0px;
+}
+.form{
+  margin: 0px;
+  width: 0px;
+}
+#submitHomeRecipe{
+  position: absolute;
+  height: 30px;
+  width: 150px;
+  border-radius: 30px;
+  left: 860px;
+  top: 500px;
+  font-style: italic;
+  background-color: #F1B310;
+}
+// Recipe edit
+.edit_form{
+  position: relative;
+  height: 400px;
+  width: 300px;
+  background-color:rgba(0, 23, 31, 0.6);
+  left: 775px;
+  top: 200px;
+}
+#ingredientListEdit{
+font-size: 20px;
+left: 30px;
+font-family:'Montserrat', sans-serif;
+}
+#TitleRecipeEdit{
+  position: relative;
+  left: -10px;
+  top: 20px;
+}
+#ingredient_container{
+  width: 200px;
+  position: relative;
+  height: 50px;
+  top: 100px;
+  left: 40px;
+}
+#recipeSubmitEdit{
+  position: relative;
+  left: 60px;
+  top: 200px;
+  height: 30px;
+  width: 150px;
+  border-radius: 30px;;
+  font-style: italic;
+  background-color: #F1B310;
+}
+// Recipe show
+.recipe_list{
+  position: relative;
+  top: 200px;
+  width: 400px;
+  padding: 50px;
+  left: 680px;
+  background-color:rgba(0, 23, 31, 0.6);
+}
+#recipeTitleShow{
+  position: relative;
+  font-size: 20px;
+  font-family:'Montserrat', sans-serif;
+  color: #F1B310;
+}
+#recipe_ingredients{
+  position: relative;
+  font-size: 15px;
+  font-family:'Montserrat', sans-serif;
+  left: 10px;
+  color: #F1B310;
+}
+#editList{
+  position: relative;
+  font-size: 20px;
+  font-family:'Montserrat', sans-serif;
+}
+#showLinks{
+  position: relative;
+  top: 150px;
+  left: 30px;
+}
