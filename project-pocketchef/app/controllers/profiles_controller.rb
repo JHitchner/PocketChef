@@ -25,7 +25,7 @@ class ProfilesController < ApplicationController
 
      @response = HTTParty.get(@apiPath.to_s + "" + @recipe_pref.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s + "&from=0" + "&to=5")
      @recipeResponse = JSON.parse(@response.body)
-     @recipe_pref = params[:search]
+     @recipe_pref = params[:search] || params[:preference]
   end
 
 

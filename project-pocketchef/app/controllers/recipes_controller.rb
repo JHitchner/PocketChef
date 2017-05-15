@@ -29,6 +29,10 @@ class RecipesController < ApplicationController
   end
   def update
     @recipe = Recipe.update(recipe_params)
+    if @recipe.save
+      redirect_to profile_path(current_user)
+    else render 'edit'
+    end
   end
   def destroy
     @recipe = Recipe.find(params[:id])
